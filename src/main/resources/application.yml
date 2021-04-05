@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  resources:
+    add-mappings: true
+  banner:
+    location: classpath:banner.txt
+  data:
+    mongodb:
+      database: main_tmp_db
+      host: localhost
+      port: 27017
