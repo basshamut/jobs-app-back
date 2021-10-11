@@ -24,7 +24,7 @@ public class PublicationDTO {
     private Long salary;
     private String isoCurrency;
     private String symbolCurrency;
-    private Date publicationDate;
+    private Long publicationDate;
     private DescriptionDTO description;
     private UserInformationDTO userInformation;
 }
