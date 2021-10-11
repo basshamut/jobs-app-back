@@ -1,28 +1,36 @@
-package com.wtys.jobs.service.mapper.dto;
+package com.wtys.jobs.persistance.entity;
 
 import java.util.Date;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.wtys.jobs.persistance.entity.Description;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Document(collection = "publications")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class DocumentJobDTO {
+public class Publication {
+    @Id
     private String id;
     private String title;
     private Long salary;
+    @Field("iso_currency")
     private String isoCurrency;
+    @Field("symbol_currency")
     private String symbolCurrency;
+    @Field("publication_date")
     private Date publicationDate;
-    private DescriptionDTO description;
+
+    private Description description;
+
+    @Field("user_information")
+    private UserInformation userInformation;
+
 }

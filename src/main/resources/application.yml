@@ -7,6 +7,4 @@ spring:
     location: classpath:banner.txt
   data:
     mongodb:
-      database: main_tmp_db
-      host: localhost
-      port: 27017
+      uri: mongodb+srv://root:sep11Jes170211@cluster0.85gyk.mongodb.net/dbjobs?retryWrites=true&w=majority

@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class DescriptionDTO {
-    private String summary;
+public class UserInformationDTO {
+
+    private String name;
+    private String email;
+
+    private PaymentInformationDTO paymentInformation;
 }
