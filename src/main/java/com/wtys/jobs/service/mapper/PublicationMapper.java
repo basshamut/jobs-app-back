@@ -2,6 +2,7 @@ package com.wtys.jobs.service.mapper;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -36,7 +37,7 @@ public class PublicationMapper {
             .salary(dto.getSalary())
             .isoCurrency(dto.getIsoCurrency())
             .symbolCurrency(dto.getSymbolCurrency())
-            .publicationDate(dto.getPublicationDate())
+            .publicationDate(new Date(dto.getPublicationDate()))
             .description(toDescription(dto.getDescription()))
             .userInformation(toUserInformation(dto.getUserInformation()))
             .build();
@@ -81,7 +82,7 @@ public class PublicationMapper {
             .salary(entity.getSalary())
             .isoCurrency(entity.getIsoCurrency())
             .symbolCurrency(entity.getSymbolCurrency())
-            .publicationDate(entity.getPublicationDate())
+            .publicationDate(entity.getPublicationDate().getTime())
             .description(toDescriptionDTO(entity.getDescription()))
             .userInformation(toUserInformationDTO(entity.getUserInformation()))
             .build();
